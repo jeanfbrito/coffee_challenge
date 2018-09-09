@@ -20,6 +20,6 @@ Start the server:
 
 Open in your browser this URL:
 
-    http://localhost:8080/
+    http://localhost:8080/src/
 
 Voilà!

@@ -18,6 +18,7 @@ app.controller('PeopleController', function($localStorage,$scope) {
         if (peopleList.people[i].name === peopleList.personName) contains = true;
       }
       if(!contains) peopleList.people.push({name:peopleList.personName});
+      peopleList.people = peopleList.$storage.peopleList;
     }
     peopleList.personName = '';
   };
