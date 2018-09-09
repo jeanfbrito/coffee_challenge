@@ -3,7 +3,7 @@
   <div ng-controller="PeopleController as peopleList">
       <ul ng-repeat="person in peopleList.people track by $index">
         <h3><span class="">{{person.name}}</span>
-        <button class="btn btn-danger btn-xs" ng-click="peopleList.deletePerson()">Delete</button></h3>
+        <button class="btn btn-danger btn-xs" ng-click="peopleList.deletePerson($index)">Delete</button></h3>
       </ul>
     <form ng-submit="peopleList.addPerson()">
       <input type="text" ng-model="peopleList.personName"  size="30"
