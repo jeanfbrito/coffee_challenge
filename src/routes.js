@@ -16,6 +16,20 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         }
       }
     })
+    // Rota para o HOME
+    .state('people', {
+      url: "/people",
+      views: {
+        "container@": {
+          controller: "PeopleController",
+          templateUrl: "views/home/people.html"
+        },
+        "nav@": {
+          controller: "PeopleController",
+          templateUrl: "views/navbar.html"
+        }
+      }
+    })
     .state('about', {
       url: "/about",
     views: {

@@ -1,0 +1,14 @@
+<h2>People List</h2>
+<div ng-controller="PeopleController as peopleList">
+  <ul class="unstyled">
+    <li ng-repeat="person in peopleList.people">
+      <input type="checkbox" ng-model="person.done">
+      <span class="done-{{person.done}}">{{person.name}}</span>
+    </li>
+  </ul>
+  <form ng-submit="peopleList.addPerson()">
+    <input type="text" ng-model="peopleList.personName"  size="30"
+            placeholder="add new person here">
+    <input class="btn-primary" type="submit" value="add">
+  </form>
+</div>
