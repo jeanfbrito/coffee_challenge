@@ -1,0 +1,9 @@
+<div class="col-md-offset-4 col-md-5">
+    <h2>Generated People List</h2>
+    <div ng-controller="PeopleController as controller">
+        <button class="btn btn-info btn-xs" ng-click="controller.sortWeek()">Generate</button>
+        <ul ng-repeat="person in weekday track by $index">
+          <h3><span class="">{{ person.name }}</span></h3>
+        </ul>
+    </div>
+  </div>

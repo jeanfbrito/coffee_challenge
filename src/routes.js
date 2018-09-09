@@ -16,7 +16,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         }
       }
     })
-    // Rota para o HOME
     .state('people', {
       url: "/people",
       views: {
@@ -25,22 +24,22 @@ app.config(function ($stateProvider, $urlRouterProvider) {
           templateUrl: "views/home/people.html"
         },
         "nav@": {
-          controller: "PeopleController",
+          controller: "HomeController",
           templateUrl: "views/navbar.html"
         }
       }
     })
-    .state('about', {
-      url: "/about",
-    views: {
-      "container@": {
-        controller: "HomeController",
-        templateUrl: "views/home/about.html"
-      },
-      "nav@": {
-        controller: "HomeController",
-        templateUrl: "views/navbar.html"
+    .state('generated_list', {
+      url: "/generated_list",
+      views: {
+        "container@": {
+          controller: "PeopleController",
+          templateUrl: "views/home/generated_list.html"
+        },
+        "nav@": {
+          controller: "HomeController",
+          templateUrl: "views/navbar.html"
+        }
       }
-    }
   });
   });
