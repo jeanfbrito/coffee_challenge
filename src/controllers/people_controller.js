@@ -7,7 +7,11 @@ app.controller('PeopleController', function($localStorage) {
     {name:'Jean'},
     {name:'Carolina'}];
   peopleList.addPerson = function() {
-    peopleList.people.push({name:peopleList.personName});
+    contains = false;
+    for(i in peopleList.people){
+      if (peopleList.people[i].name === peopleList.personName) contains = true;
+    }
+    if(!contains) peopleList.people.push({name:peopleList.personName});
     peopleList.personName = '';
   };
   peopleList.deletePerson = function(id) {
