@@ -14,7 +14,7 @@ Run the compose build:
 
     docker-compose build
 
-Star the server:
+Start the server:
 
     docker-compose up
 
