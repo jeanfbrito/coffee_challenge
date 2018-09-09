@@ -3,7 +3,7 @@ version: '3'
 services:
   web:
     build: .
-    command: http-server
+    command: http-server ./src
     volumes:
       - .:/usr/app/
       - /usr/app/node_modules
